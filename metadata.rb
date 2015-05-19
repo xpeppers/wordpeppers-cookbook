@@ -1,0 +1,11 @@
+name 'wordpeppers'
+version '0.1.0'
+supports 'ubuntu', '>= 14.04'
+
+depends 'apt'
+depends 'nginx'
+depends 'php'
+depends 'php-fpm'
+depends 'mysql', '> 6.0'
+depends 'mysql2_chef_gem'
+depends 'database'

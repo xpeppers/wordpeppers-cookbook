@@ -1,9 +1,10 @@
 include_recipe 'php'
+include_recipe 'composer'
 include_recipe 'php::module_mysql'
-
+include_recipe 'php::module_curl'
 include_recipe 'php-fpm'
 
-php_fpm_pool "www" do
+php_fpm_pool 'www' do
   enable false
 end
 

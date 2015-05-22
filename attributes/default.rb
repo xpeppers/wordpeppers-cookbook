@@ -12,5 +12,6 @@ default['wordpeppers']['db']['name'] = 'wordpress'
 default['wordpeppers']['db']['user'] = 'wordpress'
 default['wordpeppers']['db']['password'] = 'wordpress'
 
+default['wordpeppers']['server_name'] = 'localhost'
 default['wordpeppers']['docroot'] = 'wordpress'
 

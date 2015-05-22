@@ -1,6 +1,6 @@
 server {
     listen 80 default_server;
-    server_name localhost;
+    server_name <%= @server_name %>;
     server_tokens off;
 
     access_log   /var/log/nginx/access.log;

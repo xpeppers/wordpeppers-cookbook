@@ -1,4 +1,6 @@
+default['apt']['compile_time_update'] = true
 default['php']['version'] = '5.5.9'
+default['nginx']['default_site_enabled'] = false
 
 default['wordpeppers']['user'] = 'www-data'
 default['wordpeppers']['group'] = 'www-data'

@@ -1,0 +1,4 @@
+StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
+  Host github.com
+  IdentityFile /home/ubuntu/.ssh/id_rsa

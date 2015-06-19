@@ -8,3 +8,11 @@ template "#{node['nginx']['dir']}/sites-enabled/wordpress.conf" do
   )
   action :create
 end
+
+directory node['wordpeppers']['web']['docroot'] do
+  owner 'www-data'
+  group 'www-data'
+  mode '2775'
+  recursive true
+  action :create
+end

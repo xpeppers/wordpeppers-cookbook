@@ -14,6 +14,13 @@ end
 
 socket = "/var/run/mysql-default/mysqld.sock"
 
+directory '/var/run/mysqld'  do
+  owner 'mysql'
+  group 'mysql'
+  mode '2775'
+  action :create
+end
+
 link '/var/run/mysqld/mysqld.sock' do
   to socket
   not_if 'test -f /var/run/mysqld/mysqld.sock'

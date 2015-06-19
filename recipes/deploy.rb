@@ -11,6 +11,12 @@ user 'ubuntu' do
   action [ :create, :manage ]
 end
 
+group 'www-data' do
+  action :modify
+  members 'ubuntu'
+  append true
+end
+
 directory '/home/ubuntu/.ssh' do
   owner 'ubuntu'
   group 'ubuntu'

@@ -11,12 +11,12 @@ end
 php_fpm_pool 'wordpress' do
   enable true
   listen '127.0.0.1:9001'
-  user node['wordpeppers']['user']
-  group node['wordpeppers']['group']
+  user node['wordpeppers']['web']['user']
+  group node['wordpeppers']['web']['group']
   process_manager 'dynamic'
-  listen_owner node['wordpeppers']['user']
-  listen_group node['wordpeppers']['group']
-  php_options node['wordpeppers']['php_options']
+  listen_owner node['wordpeppers']['web']['user']
+  listen_group node['wordpeppers']['web']['group']
+  php_options node['wordpeppers']['web']['php_options']
   start_servers 5
 end
 

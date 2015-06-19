@@ -20,7 +20,7 @@ directory '/home/ubuntu/.ssh' do
 end
 
 file '/home/ubuntu/.ssh/id_rsa' do
-  content node['wordpeppers']['private_key']
+  content node['wordpeppers']['deploy']['private_key']
   owner 'ubuntu'
   group 'ubuntu'
   mode 0600
@@ -36,7 +36,7 @@ cookbook_file '/home/ubuntu/.ssh/config' do
 end
 
 file '/home/ubuntu/.ssh/authorized_keys' do
-  content node['wordpeppers']['authorized_keys']
+  content node['wordpeppers']['deploy']['authorized_keys']
   owner 'ubuntu'
   group 'ubuntu'
   mode 0600

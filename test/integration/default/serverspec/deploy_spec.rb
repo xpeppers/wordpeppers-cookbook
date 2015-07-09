@@ -14,4 +14,10 @@ describe 'wordpeppers::deploy' do
   describe x509_private_key('/home/ubuntu/.ssh/id_rsa') do
     it { should be_valid }
   end
+
+  describe file('/var/www') do
+    it { should be_directory }
+    it { should be_mode 775 }
+    it { should be_owned_by 'www-data' }
+  end
 end

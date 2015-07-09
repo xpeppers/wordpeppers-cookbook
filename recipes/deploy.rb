@@ -48,3 +48,11 @@ file '/home/ubuntu/.ssh/authorized_keys' do
   mode 0600
   action :create
 end
+
+directory '/var/www' do
+  owner 'www-data'
+  group 'www-data'
+  mode 0775
+  action :create
+  not_if { File.exists? '/var/www' }
+end

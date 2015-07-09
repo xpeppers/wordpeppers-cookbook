@@ -12,6 +12,7 @@ suites:
   - name: default
     run_list:
       - recipe[wordpeppers]
+      - recipe[wordpeppers::db]
       - recipe[wordpeppers::deploy]
     attributes: {
       wordpeppers: {

@@ -6,7 +6,7 @@ default['wordpeppers']['web']['user'] = 'www-data'
 default['wordpeppers']['web']['group'] = 'www-data'
 default['wordpeppers']['web']['php_options'] = {}
 default['wordpeppers']['web']['server_name'] = 'localhost'
-default['wordpeppers']['web']['docroot'] = 'wordpress'
+default['wordpeppers']['web']['docroot'] = '/var/www/wordpress'
 
 default['wordpeppers']['db']['version'] = '5.6'
 default['wordpeppers']['db']['root_password'] = 'root'

@@ -49,10 +49,11 @@ file '/home/ubuntu/.ssh/authorized_keys' do
   action :create
 end
 
-directory '/var/www' do
+directory node['wordpeppers']['web']['docroot'] do
   owner 'www-data'
   group 'www-data'
   mode 0775
   action :create
+  recursive true
   not_if { File.exists? '/var/www' }
 end

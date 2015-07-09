@@ -10,7 +10,7 @@ describe 'wordpeppers::db' do
     end
 
     describe 'test database' do
-      describe command("echo \'SHOW DATABASES LIKE 'wordpress'\' | mysql --user=wordpress --password=wordpress") do
+      describe command("echo \"SHOW DATABASES LIKE 'wordpress'\" | mysql --user=wordpress --password=wordpress") do
         its(:stdout) { should match /wordpress/ }
       end
     end

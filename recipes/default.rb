@@ -12,3 +12,4 @@ execute 'reload sysctl,conf' do
 end
 
 apt_package 'git'
+apt_package 'sendmail'

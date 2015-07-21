@@ -15,7 +15,7 @@ describe 'wordpeppers::deploy' do
     it { should be_valid }
   end
 
-  describe file('/var/www') do
+  describe file('/var/www/wordpress') do
     it { should be_directory }
     it { should be_mode 775 }
     it { should be_owned_by 'www-data' }

@@ -55,5 +55,4 @@ directory node['wordpeppers']['web']['docroot'] do
   mode 0775
   action :create
   recursive true
-  not_if { File.exists? '/var/www' }
 end

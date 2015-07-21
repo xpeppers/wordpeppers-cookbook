@@ -1,29 +1,12 @@
-mysql_service 'default' do
-  version node['wordpeppers']['db']['version']
-  initial_root_password node['wordpeppers']['db']['root_password']
-  action [:create, :start]
-end
-
-mysql_client 'default' do
-  action :create
-end
+package "mysql-server-#{node['wordpeppers']['db']['version']}"
 
 mysql2_chef_gem 'default' do
-  action :install
+  client_version node['wordpeppers']['db']['version']
+    action :install
 end
 
-socket = "/var/run/mysql-default/mysqld.sock"
-
-directory '/var/run/mysqld'  do
-  owner 'mysql'
-  group 'mysql'
-  mode '2775'
-  action :create
-end
-
-link '/var/run/mysqld/mysqld.sock' do
-  to socket
-  not_if 'test -f /var/run/mysqld/mysqld.sock'
+service 'mysql' do
+    action [:enable, :start]
 end
 
 connection_info = {

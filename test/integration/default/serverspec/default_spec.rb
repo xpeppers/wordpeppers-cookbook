@@ -8,4 +8,8 @@ describe 'wordpeppers::default' do
   describe package('sendmail') do
     it { should be_installed }
   end
+
+  describe command('wp --allow-root --info') do
+    its(:stdout) { should contain('wp-cli') }
+  end
 end

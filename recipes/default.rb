@@ -1,6 +1,7 @@
 include_recipe 'apt'
 include_recipe 'wordpeppers::php'
 include_recipe 'wordpeppers::web'
+include_recipe 'wp-cli'
 
 cookbook_file '/etc/sysctl.conf' do
   source 'sysctl.conf'

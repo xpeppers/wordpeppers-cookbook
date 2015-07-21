@@ -69,6 +69,8 @@ GRAPH
     nginx (>= 0.0.0)
     php (>= 0.0.0)
     php-fpm (>= 0.0.0)
+    wp-cli (>= 0.0.0)
+  wp-cli (0.1.4)
   xml (1.2.13)
     build-essential (>= 0.0.0)
     chef-sugar (>= 0.0.0)

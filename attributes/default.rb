@@ -9,7 +9,6 @@ default['wordpeppers']['web']['server_name'] = 'localhost'
 default['wordpeppers']['web']['docroot'] = '/var/www/wordpress'
 
 default['wordpeppers']['db']['version'] = '5.6'
-default['wordpeppers']['db']['root_password'] = 'root'
 default['wordpeppers']['db']['name'] = 'wordpress'
 default['wordpeppers']['db']['user'] = 'wordpress'
 default['wordpeppers']['db']['password'] = 'wordpress'

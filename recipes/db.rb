@@ -11,8 +11,7 @@ end
 
 connection_info = {
   host: 'localhost',
-  username: 'root',
-  password: node['wordpeppers']['db']['root_password']
+  username: 'root'
 }
 
 mysql_database node['wordpeppers']['db']['name'] do
